@@ -42,6 +42,7 @@ def handle_message(event):
     'UR-515': 'UR-515 TDS https://bit.ly/3fEkpIw', 'UR-870': 'UR-870 TDS https://bit.ly/3CscGqH'
     }
     msg = event.message.text
+    msg = msg.upper()
     r = '很抱歉，我不懂您在說什麼？'
     
     if msg in ['感謝', '謝謝', '掰掰', '3Q', 'ths', 'Ths', '3q', 'Thanks', 'thanks', 'THANKS']:
@@ -71,7 +72,7 @@ def handle_message(event):
     elif '業務' in msg:
         r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料。例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
     elif msg in pd:
-        r = pd[msg]
+        r = pd[msg].upper()
 
     line_bot_api.reply_message(
         event.reply_token,
