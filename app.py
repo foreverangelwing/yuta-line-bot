@@ -56,7 +56,7 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=p + t + r))
 
-        return
+    return
     
     if msg in ['感謝', '謝謝', '掰掰', '3Q', 'ths', 'Ths', '3q', 'Thanks', 'thanks', 'THANKS']:
         sticker_message = StickerSendMessage(
