@@ -49,9 +49,9 @@ def handle_message(event):
     if msg in pd:
         r = pd[msg]
 
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=msg + '產品說明書' + r))
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=msg + '產品說明書' + r))
 
         
     
