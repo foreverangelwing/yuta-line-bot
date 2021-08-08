@@ -73,7 +73,7 @@ def handle_message(event):
         r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料。例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
     elif '業務' in msg:
         r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料。例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
-    elif msg in pd:
+    if msg in pd:
         p = msg
         t = '產品說明書'
         r = pd[msg]
@@ -81,6 +81,12 @@ def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=p + t + r))
+
+        return
+
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=r))
 
 
 if __name__ == "__main__":
