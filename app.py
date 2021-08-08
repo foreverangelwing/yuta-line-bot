@@ -46,6 +46,17 @@ def handle_message(event):
     p = None
     t = None
     r = '很抱歉，我不懂您在說什麼？'
+
+    if msg in pd:
+        p = msg
+        t = '產品說明書'
+        r = pd[msg]
+
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=p + t + r))
+
+        return
     
     if msg in ['感謝', '謝謝', '掰掰', '3Q', 'ths', 'Ths', '3q', 'Thanks', 'thanks', 'THANKS']:
         sticker_message = StickerSendMessage(
@@ -73,16 +84,7 @@ def handle_message(event):
         r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料。例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
     elif '業務' in msg:
         r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料。例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
-    if msg in pd:
-        p = msg
-        t = '產品說明書'
-        r = pd[msg]
 
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=p + t + r))
-
-        return
 
     line_bot_api.reply_message(
         event.reply_token,
