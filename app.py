@@ -47,7 +47,7 @@ def handle_message(event):
     r = '很抱歉，我不懂您在說什麼？'
 
     if msg in pd:
-        r = pd[msg] + msg + '產品說明'
+        r = msg + '\n' + '產品說明書(TDS)' + '\n' + pd[msg]
 
         line_bot_api.reply_message(
             event.reply_token,
