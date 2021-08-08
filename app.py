@@ -55,7 +55,7 @@ def handle_message(event):
 
         
     
-    if msg in ['感謝', '謝謝', '掰掰', '3Q', 'ths', 'Ths', '3q', 'Thanks', 'thanks', 'THANKS']:
+    if msg in ['感謝', '謝謝', '掰掰', 'Ths', '3q', 'Thanks']:
         sticker_message = StickerSendMessage(
         package_id='446',
         sticker_id='1993'
@@ -67,7 +67,7 @@ def handle_message(event):
 
         return
 
-    if msg in ['hi', 'Hi', 'HI', '你好', '嗨', '哈囉']:
+    if msg in ['hi', '你好', '嗨', '哈囉']:
         r = '你好！'
     elif msg in ['目錄', '產品需求', '需求', '產品目錄']:
         r = '產品目錄：https://bit.ly/3AljGUx'
