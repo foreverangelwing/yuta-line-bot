@@ -55,7 +55,7 @@ def handle_message(event):
 
         
     
-    if msg in ['感謝', '謝謝', '掰掰', 'Ths', '3q', 'Thanks']:
+    if msg in ['感謝', '謝謝', '掰掰', 'Ths', '3q', 'Thanks', 'THS', '3Q', 'THANKS']:
         sticker_message = StickerSendMessage(
         package_id='446',
         sticker_id='1993'
@@ -67,12 +67,12 @@ def handle_message(event):
 
         return
 
-    if msg in ['hi', '你好', '嗨', '哈囉']:
+    if msg in ['hi', 'HI', 'Hi', '你好', '嗨', '哈囉', '你在嗎？']:
         r = '你好！'
     elif msg in ['目錄', '產品需求', '需求', '產品目錄']:
         r = '產品目錄：https://bit.ly/3AljGUx'
     elif msg in ['北區業務', '業務北區']:
-        r = '北區業務：許育愷 人員 聯繫方式：0937815151'
+        r = '北區業務：許育愷 業務人員\n電話：0937815151\n Email:kyra@yutar.com'
     elif msg in ['中區業務', '業務中區']:
         r = '中區業務：蔡家純 主任 聯繫方式：020479979'
     elif msg in ['南區業務', '業務南區']:
