@@ -43,8 +43,7 @@ def handle_message(event):
     }
     msg = event.message.text
     msg = msg.upper()
-    p = None
-    t = None
+    
     r = '很抱歉，我不懂您在說什麼？'
 
     if msg in pd:
