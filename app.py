@@ -47,13 +47,11 @@ def handle_message(event):
     r = '很抱歉，我不懂您在說什麼？'
 
     if msg in pd:
-        p = msg
-        t = '產品說明書'
         r = pd[msg]
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=p + t + r))
+        TextSendMessage(text=msg + '產品說明書' + r))
 
         
     
