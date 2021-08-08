@@ -39,7 +39,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     pd = {
-    'UR-515': 'UR-515 TDS https://bit.ly/3fEkpIw', 'UR-870': 'UR-870 TDS https://bit.ly/3CscGqH'
+    'UR-515':'https://bit.ly/3fEkpIw', 'UR-870':'https://bit.ly/3CscGqH'
     }
     msg = event.message.text
     msg = msg.upper()
@@ -51,7 +51,7 @@ def handle_message(event):
 
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=msg + '產品說明書' + r))
+            TextSendMessage(text=msg + '產品說明書(TDS)' + r))
 
         
     
