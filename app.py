@@ -47,11 +47,11 @@ def handle_message(event):
     r = '很抱歉，我不懂您在說什麼？'
 
     if msg in pd:
-        r = pd[msg]
+        r = pd[msg] + msg + '產品說明'
 
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=msg + '\n' + '產品說明書(TDS)' + '\n' + r))
+            TextSendMessage(text=r))
 
         
     
@@ -72,11 +72,11 @@ def handle_message(event):
     elif msg in ['目錄', '產品需求', '需求', '產品目錄']:
         r = '產品目錄：https://bit.ly/3AljGUx'
     elif msg in ['北區業務', '業務北區']:
-        r = '北區業務：許育愷 業務人員\n電話：0937815151\n Email:kyra@yutar.com'
+        r = '北區業務：許育愷 主任\n電話：0937815151\nEmail:kyra@yutar.com'
     elif msg in ['中區業務', '業務中區']:
-        r = '中區業務：蔡家純 主任 聯繫方式：020479979'
+        r = '中區業務：蔡家純 主任\n聯繫方式：020479979'
     elif msg in ['南區業務', '業務南區']:
-        r = '南區業務：郭明豐 經理 聯絡方式：094879487'
+        r = '南區業務：郭明豐 經理\n聯絡方式：094879487'
     elif '業務人員' in msg:
         r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料。例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
     elif '業務' in msg:
