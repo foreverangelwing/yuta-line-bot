@@ -47,8 +47,10 @@ def handle_message(event):
     r = '很抱歉，我不懂您在說什麼？'
 
     if msg in pd:
-        r = msg + '\n' + '產品說明書(TDS)' + '\n' + pd[msg]
-
+        if ur in msg:
+            r = msg + 'PU雙液型壓克力樹脂' +'\n' + '產品說明書(TDS)' + '\n' + pd[msg]
+        elif ae in msg:
+            r = msg + '乳化型壓克力樹脂' + '\n' + '產品說明書(TDS)' + '\n' + pd[msg]
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=r))
