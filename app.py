@@ -48,7 +48,10 @@ def handle_message(event):
 
     if msg in pd:
         if 'UR' in msg:
-            r = msg + ' PU雙液型壓克力樹脂' +'\n' + '產品說明書(TDS)' + '\n' + pd[msg]
+            r = msg + '  雙液型壓克力樹脂' +'\n' + '產品說明書(TDS)' + '\n' + pd[msg]
+        elif 'AE' in msg:
+             r = msg + '  乳化型壓克力樹脂' +'\n' + '產品說明書(TDS)' + '\n' + pd[msg]
+
        
         line_bot_api.reply_message(
             event.reply_token,
