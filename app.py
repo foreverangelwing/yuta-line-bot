@@ -39,7 +39,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     pd = {
-    'UR-515':'https://bit.ly/3fEkpIw', 'UR-870':'https://bit.ly/3CscGqH', 'AE-300':'https://bit.ly/3Am7SBy'
+    'UR-515':'https://bit.ly/3fEkpIw', 'UR-870':'https://bit.ly/3CscGqH', 'AE-300':'https://bit.ly/3Am7SBy', 'M-828':'https://bit.ly/3lLb6us'
     }
     msg = event.message.text
     msg = msg.upper()
@@ -51,6 +51,8 @@ def handle_message(event):
             r = msg + '  雙液型壓克力樹脂' +'\n' + '產品說明書(TDS)' + '\n' + pd[msg]
         elif 'AE' in msg:
             r = msg + '  乳化型壓克力樹脂' +'\n' + '產品說明書(TDS)' + '\n' + pd[msg]
+        elif 'M' in msg:
+            r = msg + '  氨基樹脂' +'\n' + '產品說明書(TDS)' + '\n' + pd[msg]
 
        
         line_bot_api.reply_message(
