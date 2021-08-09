@@ -39,7 +39,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     pd = {
-    'UR-515':'https://bit.ly/3fEkpIw', 'UR-870':'https://bit.ly/3CscGqH'
+    'UR-515':'https://bit.ly/3fEkpIw', 'UR-870':'https://bit.ly/3CscGqH', 'AE-300':'https://bit.ly/3Am7SBy'
     }
     msg = event.message.text
     msg = msg.upper()
