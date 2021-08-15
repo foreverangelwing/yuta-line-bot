@@ -76,9 +76,9 @@ def handle_message(event):
     if msg in ['hi', 'HI', 'Hi', '你好', '嗨', '哈囉', '你在嗎？']:
         r = '你好！'
     elif msg in ['目錄', '產品需求', '需求', '產品目錄']:
-        if '汽車塗料' in msg:
-            r = '請參照1-2頁數'
-            r = '產品目錄：https://bit.ly/3AljGUx'
+        r = '請參照35～36頁\n''產品目錄：https://bit.ly/3AljGUx'
+    elif '汽車修補' in msg:
+        r = '請參照35～36頁\n''產品目錄：https://bit.ly/3AljGUx'
     elif msg in ['北區業務', '業務北區']:
         r = '北區業務：許育愷 主任\n電話：0937815151\nEmail:kyra@yutar.com'
     elif msg in ['中區業務', '業務中區']:
