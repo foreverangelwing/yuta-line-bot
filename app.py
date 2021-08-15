@@ -44,7 +44,7 @@ def handle_message(event):
     msg = event.message.text
     msg = msg.upper()
 
-    r = '很抱歉，我不懂您在說什麼？\n我有查詢目錄功能...輸入目錄\n單項說明書功能...\業務聯絡資訊\n留言等真人跟您回覆'
+    r = '很抱歉，我不懂您在說什麼？\n我有查詢目錄功能...輸入"目錄"\n單項說明書功能...輸入"編號UR-515"\n業務聯絡資訊...輸入"北區業務"\n留言等真人跟您回覆'
 
     if msg in pd:
         if 'UR' in msg:
@@ -79,7 +79,7 @@ def handle_message(event):
         r = '優達樹脂化工股份有限公司\n統編：72177977\n地址：737台南市鹽水區自立街1號（新營工業區）\n網址：https://www.yutar.com/\nTEL：06-6532-110、0905-721-977\nFAX：06-6530-941\n郵箱: service@yutar.com (請在郵件主旨前加『6530941』，以確使您的郵件不會淹沒在Junk mails中！)'
     elif msg in ['優達規模', '公司規模', '生產產品種類', '關於優達']:
         r = '創立於：1980-08-02\n統一編號：72177977\n資本總額：US＄10 Million\n工作夥伴:100\n工廠面積：16500 m²\n新營廠、官田廠\n產品:丙烯酸樹脂、專業的16項產業線胺基樹脂'
-    elif msg in ['目錄', '產品需求', '需求', '產品目錄']:
+    elif msg in ['目錄', '產品需求', '產品目錄']:
         r = '產品目錄：https://bit.ly/3AljGUx'
     elif '汽車修補' in msg:
         r = '請參照35～36頁\n''產品目錄：https://bit.ly/3AljGUx'
@@ -93,6 +93,10 @@ def handle_message(event):
         r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料\n例如：北區業務、中區業務、南區業務'
     elif '業務' in msg:
         r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料\n例如：北區業務、中區業務、南區業務'
+    elif '需求' in msg:
+        r = '如有需求者可先參照產品目錄\n產品目錄：https://bit.ly/3AljGUx'
+    elif '許育愷' in msg:
+        r = '他是一個大帥哥，如有漂亮、正妹、未婚者有興趣認識我，可撥電話給我0987368967專門為您服務....等你喔!!\n此程式使用Python開發，預計下一版可以增加功能為統計輸入對話內容及TDS點擊率來推算出暢銷產品\nLine ID:foreverangelwing'
 
 
         
