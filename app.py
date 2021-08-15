@@ -44,13 +44,6 @@ def handle_message(event):
     msg = event.message.text
     msg = msg.upper()
 
-    while True:
-        r = '您好我是優達樹脂詢問機器人\n 我有的功能如可以留下訊息有專人跟您聯繫、產品目錄查詢、單項說明書TDS、聯繫業務人員...等'
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=r))
-        break
-
     r = '很抱歉，我不懂您在說什麼？'
 
     if msg in pd:
@@ -80,9 +73,8 @@ def handle_message(event):
 
         return
 
-    if msg in ['hi', 'HI', 'Hi', '你好', '嗨', '哈囉', '你在嗎？']:
+    if msg in ['hi', 'HI', 'Hi', '你好', '嗨', '哈囉', '你在嗎？', '有人在嗎？']:
         r = '你好！'
-    elis 貴公司
     elif msg in ['目錄', '產品需求', '需求', '產品目錄']:
         r = '產品目錄：https://bit.ly/3AljGUx'
     elif '汽車修補' in msg:
@@ -94,9 +86,9 @@ def handle_message(event):
     elif msg in ['南區業務', '業務南區']:
         r = '南區業務：郭明豐 經理\n聯絡方式：094879487'
     elif '業務人員' in msg:
-        r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料。例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
+        r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料\n例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
     elif '業務' in msg:
-        r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料。例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
+        r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料\n例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
 
 
         
