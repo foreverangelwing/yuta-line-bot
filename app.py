@@ -75,8 +75,6 @@ def handle_message(event):
 
     if msg in ['hi', 'HI', 'Hi', '你好', '嗨', '哈囉', '你在嗎？']:
         r = '你好！'
-    elif '公司地址' or '優達' in msg:
-        r = '您好\n''優達樹脂化工股份有限公司\n''地址：台南縣鹽水區新營工業區自由路1號'
     elif msg in ['目錄', '產品需求', '需求', '產品目錄']:
         r = '產品目錄：https://bit.ly/3AljGUx'
     elif '汽車修補' in msg:
