@@ -75,8 +75,10 @@ def handle_message(event):
 
     if msg in ['hi', 'HI', 'Hi', '你好', '嗨', '哈囉', '你在嗎？']:
         r = '你好！'
+    elif '公司地址' or '優達' in msg:
+        r = '您好\n''優達樹脂化工股份有限公司\n''地址：台南縣鹽水區新營工業區自由路1號'
     elif msg in ['目錄', '產品需求', '需求', '產品目錄']:
-        r = '請參照35～36頁\n''產品目錄：https://bit.ly/3AljGUx'
+        r = '產品目錄：https://bit.ly/3AljGUx'
     elif '汽車修補' in msg:
         r = '請參照35～36頁\n''產品目錄：https://bit.ly/3AljGUx'
     elif msg in ['北區業務', '業務北區']:
@@ -89,6 +91,7 @@ def handle_message(event):
         r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料。例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
     elif '業務' in msg:
         r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料。例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
+
 
         
     line_bot_api.reply_message(
