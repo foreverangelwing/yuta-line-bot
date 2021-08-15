@@ -76,7 +76,9 @@ def handle_message(event):
     if msg in ['hi', 'HI', 'Hi', '你好', '嗨', '哈囉', '你在嗎？']:
         r = '你好！'
     elif msg in ['目錄', '產品需求', '需求', '產品目錄']:
-        r = '產品目錄：https://bit.ly/3AljGUx'
+        if '汽車塗料' in msg:
+            r = '請參照1-2頁數'
+            r = '產品目錄：https://bit.ly/3AljGUx'
     elif msg in ['北區業務', '業務北區']:
         r = '北區業務：許育愷 主任\n電話：0937815151\nEmail:kyra@yutar.com'
     elif msg in ['中區業務', '業務中區']:
@@ -88,10 +90,11 @@ def handle_message(event):
     elif '業務' in msg:
         r = '您可以在對話視窗輸入"XX業務"即可查詢聯繫資料。例如：北區業務、中區業務、南區業務、外銷業務、大陸業務'
 
-
+        
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
+    
 
 
 if __name__ == "__main__":
